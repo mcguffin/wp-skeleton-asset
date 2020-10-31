@@ -10,5 +10,7 @@
             "McGuffin\\Asset\\": "src/"
         }
     },
-    "require": {}
+    "require": {
+		"mcguffin/wp-skeleton-core": "dev-master"
+	}
 }
