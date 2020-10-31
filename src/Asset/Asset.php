@@ -11,7 +11,7 @@ if ( ! defined('ABSPATH') ) {
 	die('FU!');
 }
 
-use PDFRenderer\Core;
+//use PDFRenderer\Core;
 
 
 /**
