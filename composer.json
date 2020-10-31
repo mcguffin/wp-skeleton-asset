@@ -4,6 +4,7 @@
     "type": "wordpress-library",
     "license": "GPL-3.0-or-later",
     "minimum-stability": "stable",
+	"version":"0.0.1",
     "autoload": {
         "psr-4": {
             "McGuffin\\Asset\\": "src/"
