@@ -11,7 +11,7 @@ if ( ! defined('ABSPATH') ) {
 	die('FU!');
 }
 
-use McGuffin\Core;
+use PDFRenderer\Core;
 
 
 /**
