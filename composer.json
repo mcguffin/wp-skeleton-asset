@@ -4,5 +4,10 @@
     "type": "wordpress-library",
     "license": "GPL-3.0-or-later",
     "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "McGuffin\\Asset\\": "src/"
+        }
+    },
     "require": {}
 }
