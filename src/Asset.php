@@ -11,7 +11,7 @@ if ( ! defined('ABSPATH') ) {
 	die('FU!');
 }
 
-//use McGuffin\Core;
+use McGuffin\Core;
 
 
 /**
@@ -93,7 +93,7 @@ class Asset {
 
 	public function __construct( $asset ) {
 
-		$this->core = Core\Core::instance();
+		$this->core = Core\Core::get();
 
 		$this->asset = preg_replace( '/^(\/+)/', '', $asset ); // unleadingslashit
 		$this->type = strtolower( pathinfo( $this->asset, PATHINFO_EXTENSION ));
