@@ -13,6 +13,27 @@ if ( ! defined('ABSPATH') ) {
 
 use McGuffin\Core;
 
+/**
+ *	Asset factory Class
+ *
+ *	Usage
+ *	-----
+ *	<?php
+ *
+ *	// will throw exception if 'js/some-js-file.js' is not there!
+ *	$some_asset = Asset\Asset::get( 'js/some-js-file.js' )
+ *		// wrapper to wp_localize_script()
+ *		->localize( [
+ *			'some_option'	=> 'some_value',
+ *			'l10n'			=> [
+ *				'hello'	=> __('World','pdf-renderer')
+ *			],
+ *		], 'l10n_varname' )
+ *		->deps( 'jquery' ) // or ->deps( [ 'jquery','wp-backbone' ] )
+ *		->footer( true ) // enqueue in footer
+ *		->enqueue(); // actually enqueue script
+ *
+ */
 class Factory {
 	/**
 	 *	@var Core\CoreInterface
