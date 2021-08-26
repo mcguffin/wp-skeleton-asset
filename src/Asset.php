@@ -83,17 +83,21 @@ class Asset {
 	private $registered = false;
 
 	/**
-	 *	@var Core\Core
+	 *	@var Core\CoreInterface
 	 */
 	private $core = null;
 
-	static function get( $asset ) {
-		return new self( $asset );
+	/**
+	 *	@param String $asset
+	 *	@param CoreInterface $core
+	 */
+	public static function get( $asset, Core\CoreInterface $core ) {
+		return new self( $asset, $core );
 	}
 
-	private function __construct( $asset ) {
+	private function __construct( $asset, Core\CoreInterface $core ) {
 
-		$this->core = Core\Core::get();
+		$this->core = $core;
 
 		$this->asset = preg_replace( '/^(\/+)/', '', $asset ); // unleadingslashit
 		$this->type = strtolower( pathinfo( $this->asset, PATHINFO_EXTENSION ));
